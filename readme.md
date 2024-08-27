@@ -4,7 +4,7 @@ been verified to work.
 
 Packaging will be worked on for both Windows and Linux.
 
-> ![Important]
+> [!IMPORTANT]
 > The RGB issue was not caused and is in no way associated to Handheld Daemon.
 > I choose to provide the fix and packaging for it out of respect to my users.
 
