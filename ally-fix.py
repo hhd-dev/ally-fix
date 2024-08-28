@@ -358,5 +358,14 @@ else:
         print(f"C: {cmd.hex()}")
         dev.write(cmd)
     print(f"Zone power settings synced. Rainbow mode should work.")
+    cmds = [
+        bytes([0x5A, 0xB3, 0, 3, 0, 0, 0, 0xF5, 0, 0x00, 0, 0, 0]),
+        bytes([0x5D, 0xB5]),
+        bytes([0x5D, 0xB4]),
+    ]
+    for cmd in cmds:
+        print(f"C: {cmd.hex()}")
+        dev.write(cmd)
+    print(f"Switched to rainbow mode.")
     print(f"Fix applied successfully.")
     exit()
