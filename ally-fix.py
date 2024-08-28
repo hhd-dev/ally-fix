@@ -6,10 +6,12 @@ import sys
 
 __all__ = ["HIDException", "DeviceInfo", "Device", "enumerate", "BusType"]
 
-def exit(code = 0):
+
+def exit(code=0):
     print(f"\nPress any key to exit.")
     input()
     sys.exit(code)
+
 
 hidapi = None
 library_paths = (
@@ -335,7 +337,7 @@ for v in enumerate(vid=ASUS_VID):
     if usage != 0x80:
         continue
 
-    path = v['path']
+    path = v["path"]
     print(f"Vendor device found at path '{path}'")
     dev = Device(path)
     break
@@ -346,9 +348,15 @@ if not dev:
     print(f"THE FIX WAS NOT APPLIED.")
     exit(1)
 else:
-    cmd = bytes([0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF])
-    print(f"Writing command: {cmd.hex()}")
-    dev.write(cmd)
+    print("Writing commands: ")
+    cmds = [
+        bytes([0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF]),
+        bytes([0x5D, 0xB5]),
+        bytes([0x5D, 0xB4]),
+    ]
+    for cmd in cmds:
+        print(f"C: {cmd.hex()}")
+        dev.write(cmd)
     print(f"Zone power settings synced. Rainbow mode should work.")
     print(f"Fix applied successfully.")
     exit()
