@@ -339,7 +339,7 @@ for v in enumerate(vid=ASUS_VID):
 
     path = v["path"]
     print(f"Vendor device found at path '{path}'")
-    dev = Device(path)
+    dev = Device(path=path)
     break
 
 if not dev:
