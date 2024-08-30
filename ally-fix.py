@@ -321,6 +321,7 @@ ALLY_PID = 0x1ABE
 ALLY_X_PID = 0x1B4C
 
 dev = None
+print("Searching for Ally device...")
 for v in enumerate(vid=ASUS_VID):
     if v["product_id"] not in (ALLY_PID, ALLY_X_PID):
         continue
