@@ -47,7 +47,7 @@ While the use of Asus' trademarks in the name of the programs might suggest
 otherwise, it is in no way endorsed or developed by Asus, and, apart from some 
 limited communication with Asus engineers, is not affiliated with Asus in any way.
 
-The Rainbow RGB issue was caused by all asusctl versions from `6.0.0` to `6.0.11`, with 
+The Rainbow RGB issue was caused by all `asusctl` versions from `6.0.0` to `6.0.11`, with 
 version `6.0.12` being the first to stop causing the issue (not fixing it).
 In addition, using a `5.0.X` version of the software is known to fix the issue.
 Therefore, the question is raised: why did the issue occur in the first place?
@@ -66,7 +66,7 @@ to use it, this means that any user that had `asusctl` installed is affected
 by the issue.
 
 In Bazzite, we deprecated the `ally` image and encouraged our users to migrate
-to the `deck` image in June, with the Ally image remaining for Asus laptop owners
+to the `deck` image in June, with the `ally` image remaining for Asus laptop owners
 that want gamemode.
 Since `asusctl` is not included in the `deck` image, users that installed 
 Bazzite afterwards, including **all** Ally X owners have working RGB rainbow mode.
