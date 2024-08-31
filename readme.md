@@ -35,7 +35,7 @@ The only requirement for running it from source is having libusb and Python 3.8+
 
 ## Why Rainbow RGB broke
 As Handheld Daemon was being developed, it did not have a strong set of TDP
-features and access to fan curves, which made it limitting.
+features and access to fan curves, which made it limiting.
 To supplement this functionality, the asusctl/rog center/asus-linux.org suite
 of software was included in Bazzite, as part of the `bazzite-ally` image.
 The same software suite was also included in other distributions such as Nobara,
@@ -54,7 +54,7 @@ Therefore, the question is raised: why did the issue occur in the first place?
 
 One of the commands ran by asusctl to control when the leds were on
 **in laptops** (`0x5D, 0xBD, 0x01, X, X, X, X`)
-was run on the Ally instead of the proper command.
+was run on the Ally instead of the proper command Armoury Crate.
 This unsyncs the zones of the Ally, causing single zone RGB modes to break.
 The single-zone functionality is only used by a single RGB mode in Armoury Crate:
 Rainbow mode when in the non-aura mode.
