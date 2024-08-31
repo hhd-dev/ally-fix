@@ -54,7 +54,7 @@ Therefore, the question is raised: why did the issue occur in the first place?
 
 One of the commands ran by asusctl to control when the leds were on
 **in laptops** (`0x5D, 0xBD, 0x01, X, X, X, X`)
-was run on the Ally instead of the proper command Armoury Crate.
+was run on the Ally instead of the proper command in Armoury Crate.
 This unsyncs the zones of the Ally, causing single zone RGB modes to break.
 The single-zone functionality is only used by a single RGB mode in Armoury Crate:
 Rainbow mode when in the non-aura mode.
