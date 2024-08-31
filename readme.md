@@ -38,7 +38,7 @@ As Handheld Daemon was being developed, it did not have a strong set of TDP
 features and access to fan curves, which made it limiting.
 To supplement this functionality, the asusctl/rog center/asus-linux.org suite
 of software was included in Bazzite, as part of the `bazzite-ally` image.
-The same software suite was also included in other distributions such as Nobara,
+The same software suite is also included in other distributions such as Nobara,
 CachyOS, and as of version 46 ChimeraOS.
 
 The asus-linux.org family of software is a community run project that aims to
