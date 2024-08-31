@@ -38,6 +38,7 @@ else:
     )
     error += "\nINSTALL LIBUSB TO RUN"
     error += "\nhttps://github.com/libusb/hidapi"
+    print(error)
     exit(1)
 
 
