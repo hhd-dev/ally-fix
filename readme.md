@@ -84,15 +84,3 @@ Hopefully, this step helps restore some trust that was lost due to this issue.
 We will also reach out to Asus so that that command can be nulled on the Ally
 and Ally X firmware as part of an MCU update, so that it does not cause any 
 issues in the future.
-
-Moving forward, we also plan to start working closer with manufacturers to ensure
-that both Handheld Daemon and the kernel shipped by Bazzite are validated to work
-on the devices we claim to support.
-Handheld Daemon itself already has a multitude of safety checks to ensure its
-correct operation, those include: command debouncing, running only commands that
-are run by manufacturer software, as they are run by that software, and multiple
-DMI and HID checks to ensure only the correct device receives those commands.
-Moreover, this issue has caused us to take a closer look at the kernel we ship
-and moving forward we will only cherry-pick commits for devices that we have
-validated to work or even go a step further and remove commits that are included in
-the upstream Linux Foundation kernel.
