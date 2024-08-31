@@ -71,7 +71,7 @@ that want gamemode.
 Since `asusctl` is not included in the `deck` image, users that installed 
 Bazzite afterwards, including **all** Ally X owners have working RGB rainbow mode.
 This fix is for users who used the `bazzite-ally` image before the fixes and
-users for other distributions.
+users of other distributions.
 Unfortunately, this includes Ally and **Ally X** users who installed ChimeraOS 46.2.
 
 We want our users to have a great experience with their devices, and not feel
