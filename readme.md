@@ -68,8 +68,8 @@ by the issue.
 In Bazzite, we deprecated the `ally` image and encouraged our users to migrate
 to the `deck` image in June, with the Ally image remaining for Asus laptop owners
 that want gamemode.
-That means that any users that installed Bazzite afterwards, including **all** 
-Ally X owners have working RGB rainbow mode.
+Since `asusctl` is not included in the `deck` image, users that installed 
+Bazzite afterwards, including **all** Ally X owners have working RGB rainbow mode.
 This fix is for users who used the `bazzite-ally` image before the fixes and
 users for other distributions.
 Unfortunately, this includes Ally and **Ally X** users who installed ChimeraOS 46.2.
