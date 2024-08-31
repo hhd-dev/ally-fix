@@ -66,12 +66,13 @@ to use it, this means that any user that had `asusctl` installed is affected
 by the issue.
 
 In Bazzite, we deprecated the `ally` image and encouraged our users to migrate
-in June.
-This means that any users that installed Bazzite afterwards, including **all** 
+to the `deck` image in June, with the Ally image remaining for Asus laptop owners
+that want gamemode.
+That means that any users that installed Bazzite afterwards, including **all** 
 Ally X owners have working RGB rainbow mode.
 This fix is for users who used the `bazzite-ally` image before the fixes and
 users for other distributions.
-This includes Ally and **Ally X** users who installed ChimeraOS 46.2.
+Unfortunately, this includes Ally and **Ally X** users who installed ChimeraOS 46.2.
 
 We want our users to have a great experience with their devices, and not feel
 like they are risking them by using our software.
