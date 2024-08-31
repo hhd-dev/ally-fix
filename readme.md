@@ -56,8 +56,9 @@ One of the commands ran by asusctl to control when the leds were on
 **in laptops** (`0x5D, 0xBD, 0x01, X, X, X, X`)
 was run on the Ally instead of the proper command.
 This unsyncs the zones of the Ally, causing single zone RGB modes to break.
-The current mode that uses this in Armoury Crate is the Rainbow mode when in
-the non-aura mode.
+The single-zone functionality is only used by a single RGB mode in Armoury Crate:
+Rainbow mode when in the non-aura mode.
+This leads to that mode being broken.
 The fix in this repository runs the command `0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF`
 which syncs the zones and restores the RGB rainbow mode.
 As `asusctl` asserts itself and runs on boot, even if the user did not choose
@@ -77,7 +78,7 @@ like they are risking them by using our software.
 For this reason, even though we did not cause this issue, we dedicated time in 
 developing and testing a fix that can be run both on Windows and Linux, and 
 does not require the use of any other software.
-Hopefully, this step helps restore some of the trust lost due to this issue.
+Hopefully, this step helps restore some trust that was lost due to this issue.
 
 We will also reach out to Asus so that that command can be nulled on the Ally
 and Ally X firmware as part of an MCU update, so that it does not cause any 
