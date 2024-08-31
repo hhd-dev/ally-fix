@@ -59,11 +59,12 @@ This unsyncs the zones of the Ally, causing single zone RGB modes to break.
 The single-zone functionality is only used by a single RGB mode in Armoury Crate:
 Rainbow mode when in the non-aura mode.
 This leads to that mode being broken.
-The fix in this repository runs the command `0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF`
-which syncs the zones and restores the RGB rainbow mode.
 As `asusctl` asserts itself and runs on boot, even if the user did not choose
 to use it, this means that any user that had `asusctl` installed is affected
 by the issue.
+
+The fix in this repository runs the command `0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF`
+which syncs the zones and restores the RGB rainbow mode.
 
 In Bazzite, we deprecated the `ally` image and encouraged our users to migrate
 to the `deck` image in June, with the `ally` image remaining for Asus laptop owners
