@@ -6,6 +6,8 @@ mode in Armoury Crate (when using non-aura) will not work.
 When you switch to this mode, either one of the stick leds will be lit in a
 static color or neither of the stick leds will be lit.
 
+This also includes the RGB modes Comet, Reactive, etc that were added recently.
+
 > [!IMPORTANT]
 > The RGB issue was not caused and is in no way associated to Handheld Daemon.
 > Read the explanation below for more information.
@@ -55,13 +57,16 @@ Therefore, the question is raised: why did the issue occur in the first place?
 One of the commands ran by asusctl to control when the leds were on
 **in laptops** (`0x5D, 0xBD, 0x01, X, X, X, X`)
 was run on the Ally instead of the proper command in Armoury Crate.
-This unsyncs the zones of the Ally, causing single zone RGB modes to break.
-The single-zone functionality is only used by a single RGB mode in Armoury Crate:
-Rainbow mode when in the non-aura mode.
-This leads to that mode being broken.
+Versions `6.0.X` of asusctl ran a variant of the command that unsyncs the 4 RGB zones 
+of the Ally, causing single zone RGB modes to break.
+Prior to those, the parameter set that was used, by happenstance, caused the zones to 
+sync fixing the issue.
 As `asusctl` asserts itself and runs on boot, even if the user did not choose
 to use it, this means that any user that had `asusctl` installed is affected
 by the issue.
+The single-zone functionality was first used by the Rainbow RGB mode in Armory 
+Crate, but now includes other modes such as Comet and Reactive.
+The unsyncing leads to those modes being broken.
 
 The fix in this repository runs the command `0x5D, 0xBD, 0x01, 0xFF, 0xFF, 0xFF, 0xFF`
 which syncs the zones and restores the RGB rainbow mode.
